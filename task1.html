@@ -11,27 +11,65 @@
              
          let nstr=S.toLowerCase();
           let count=0;
-        for(let i=0;i<S.length;i++)
+          let st=nstr.split(" ");
+          document.write(nstr);
+          let nstr1="";
+
+          for(let i=0;i<st.length;i++)
+        {  
+             if(st[i].length<4){
+              nstr1=nstr1+st[i]+" "
+             }
+        }
+        console.log(nstr1);
+        // let rem=""
+        // for(let i=0;i<nstr1.length;i++)
+        // {
+        //   for(let j=0;j<nstr1.length;j++)
+        // {
+        //   if(nstr1[j].charAt(i)!='z')
+        // {
+        //   rem=rem+nstr1[i]+" ";
+        // }
+        // }
+        // }
+        // console.log(rem);
+
+        let final=nstr1.split(" ");
+        for(let i=0;i<nstr1.length;i++)
         {
-          for(let j=0;j<S.length;j++)
-          {
-            if(S.charAt(j)!=' ')
-          {
-            count++;
-          
-          }
-          if(count<4)
-          {
-            console.log(S[i]);
+          for(let j=i+1;j<nstr1.length;i++)
+        {
+          if(final[i].charAt(i)<final[j].charAt(j)){
+            let temp=final[i].charAt(i);
+            final[i].charAt(i)=final[j].charAt(j);
+            final[j].charAt(j)=temp;
           }
         }
+        }
+
+        let finals=final.join(" ");
+        console.log(final);
+        
+       
+        // for(let i=0;i<S.length;i++)
+        // {
+        //   for(let j=0;j<S.length;j++)
+        //   {
+        //     if(S.charAt(i)!=' ')
+        //   {
+        //     count++;
+        //   }
+
+        //   }
+        // }
 
 
-     document.write(nstr);
+     
 
         }
-    //   let str=["AKASH","DIOAKA","XYZ","ABC"];
-    //   listOfwords(str);
+      let str=["AKASH","DIOAKA","XYZ","ABC",'az'];
+      listOfwords(str);
 
   
        
