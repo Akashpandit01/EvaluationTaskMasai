@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function listOfwords(str){
+         let S=str.join(" ");
+             
+         let nstr=S.toLowerCase();
+          let count=0;
+        for(let i=0;i<S.length;i++)
+        {
+          for(let j=0;j<S.length;j++)
+          {
+            if(S.charAt(j)!=' ')
+          {
+            count++;
+          
+          }
+          if(count<4)
+          {
+            console.log(S[i]);
+          }
+        }
+
+
+     document.write(nstr);
+
+        }
+    //   let str=["AKASH","DIOAKA","XYZ","ABC"];
+    //   listOfwords(str);
+
+  
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
